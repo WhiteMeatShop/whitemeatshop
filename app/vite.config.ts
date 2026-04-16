@@ -1,14 +1,15 @@
-import path from "path";
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-// Import inspectAttr if needed
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/WhiteMeatShop/', // Fixed for GitHub Pages
-  plugins: [react()],      // Simplified for testing
+  // This must match your repository name exactly
+  base: '/whitemeatshop/', 
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+})
