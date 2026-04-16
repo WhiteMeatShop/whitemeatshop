@@ -20,10 +20,9 @@ jobs:
         run: |
           npm install
           npm run build
-     - name: Upload Artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This must point to the folder Vite creates after 'npm run build'
           path: ./dist
       - name: Deploy to GitHub Pages
         id: deployment
